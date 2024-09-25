@@ -103,30 +103,41 @@
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery-item img {
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 8px;
       transition: transform 0.5s ease;
     }
 
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
     .gallery-item:hover img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     .gallery-item h3 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 10px;
+      position: relative;
       font-size: 1.25rem;
-      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .gallery-item p {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 5px;
     }
 
     /* Historia */
@@ -264,14 +275,17 @@
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112337.png" alt="Obra 1">
         <h3>Obra 1</h3>
+        <p>Descripción de la obra 1. Técnicas utilizadas: óleo sobre lienzo.</p>
       </div>
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112543.png" alt="Obra 2">
         <h3>Obra 2</h3>
+        <p>Descripción de la obra 2. Exploración de colores y formas.</p>
       </div>
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112608.png" alt="Obra 3">
         <h3>Obra 3</h3>
+        <p>Descripción de la obra 3. Arte contemporáneo y texturas.</p>
       </div>
     </div>
   </section>
@@ -286,17 +300,17 @@
 
   <!-- Eventos -->
   <section id="events" class="events">
-    <h2>Seminarios y Eventos</h2>
+    <h2>Seminarios y Exposiciones</h2>
     <div class="event-list">
       <div class="event-item">
-        <h3>Seminario de Técnicas Mixtas</h3>
-        <div class="date">10 de Octubre, 2024</div>
-        <p>Aprende de la mano de Gabeza las técnicas mixtas utilizadas en sus obras más conocidas.</p>
+        <h3>Exposición "Colores de la Tierra"</h3>
+        <p class="date">Fecha: 15 de Octubre, 2024</p>
+        <p>Lugar: Galería Nacional de Arte, Ciudad de México.</p>
       </div>
       <div class="event-item">
-        <h3>Exposición Anual de Arte Contemporáneo</h3>
-        <div class="date">20 de Noviembre, 2024</div>
-        <p>Únete a la exposición donde Gabeza presentará sus últimas obras en una muestra exclusiva.</p>
+        <h3>Seminario de Técnicas Mixtas</h3>
+        <p class="date">Fecha: 20 de Noviembre, 2024</p>
+        <p>Un seminario práctico donde los asistentes podrán experimentar con técnicas mixtas y crear sus propias obras.</p>
       </div>
     </div>
   </section>
