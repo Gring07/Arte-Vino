@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gabeza - Artista Visual</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     /* Estilos globales */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif; /* Tipografía más legible */
+      font-family: 'Roboto', sans-serif;
     }
 
     body {
-      background-color: #f9f9f9; /* Fondo suave */
+      background-color: #f0f0f0; /* Fondo suave gris claro */
       color: #333;
       line-height: 1.6;
       margin-top: 80px;
@@ -36,7 +36,7 @@
     /* Navbar */
     .navbar {
       width: 100%;
-      background-color: #fff; /* Color de fondo de la navbar */
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 10px 30px;
       display: flex;
       justify-content: space-between;
@@ -64,27 +64,46 @@
 
     /* Hero section */
     .hero {
-      background-image: url('./images/Screenshot_20240924-112337.png');
-      background-size: cover;
-      background-position: center;
+      position: relative;
       height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: slide 20s infinite;
+    }
+
+    @keyframes slide {
+      0% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      45% { opacity: 0; }
+      50% { opacity: 1; }
+      70% { opacity: 1; }
+      75% { opacity: 0; }
+      95% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .hero h1 {
+      position: absolute;
+      top: 20px;
+      left: 30px;
       font-size: 4rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      color: white;
+      z-index: 1;
     }
 
     /* Portafolio */
     .portfolio {
       padding: 80px 0;
-      background-color: #fafafa;
+      background-color: #fff;
       text-align: center;
     }
 
@@ -144,7 +163,7 @@
     /* Historia */
     .history {
       padding: 80px 20px;
-      background-color: #FFFFFF;
+      background-color: #fff;
       text-align: center;
     }
 
@@ -162,7 +181,7 @@
 
     /* Eventos */
     .events {
-      background-color: #f3e6e8;
+      background-color: #e2f3f5;
       padding: 80px 20px;
       text-align: center;
     }
@@ -178,7 +197,7 @@
     }
 
     .event-item {
-      background-color: #FFF;
+      background-color: #fff;
       margin-bottom: 20px;
       padding: 20px;
       border-radius: 8px;
@@ -199,7 +218,7 @@
 
     /* Contacto */
     .contact {
-      background-color: #FFFFFF;
+      background-color: #fff;
       padding: 80px 20px;
       text-align: center;
     }
@@ -217,7 +236,7 @@
     }
 
     .contact button {
-      background-color: #333;
+      background-color: #444;
       color: white;
       padding: 15px 30px;
       border: none;
@@ -227,12 +246,12 @@
     }
 
     .contact button:hover {
-      background-color: #555;
+      background-color: #666;
     }
 
     /* Footer */
     footer {
-      background-color: #333;
+      background-color: #444;
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -255,7 +274,7 @@
 
   <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">Gabeza</div>
+    <div class="logo">GABEZA</div>
     <ul>
       <li><a href="#portfolio">Portafolio</a></li>
       <li><a href="#history">Historia</a></li>
@@ -266,6 +285,9 @@
 
   <!-- Hero section -->
   <section class="hero">
+    <img src="./images/slide1.jpg" alt="Imagen 1">
+    <img src="./images/slide2.jpg" alt="Imagen 2">
+    <img src="./images/slide3.jpg" alt="Imagen 3">
     <h1>Gabeza - Artista Visual</h1>
   </section>
 
@@ -276,7 +298,7 @@
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112337.png" alt="Obra 1">
         <h3>Obra 1</h3>
-        <p>Obra representativa de la conexión entre el arte y la naturaleza. Técnica: óleo sobre lienzo.</p>
+        <p>Obra representativa de la conexión entre el arte y la naturaleza.</p>
       </div>
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112543.png" alt="Obra 2">
@@ -286,22 +308,52 @@
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112608.png" alt="Obra 3">
         <h3>Obra 3</h3>
-        <p>Composición contemporánea que desafía las reglas tradicionales del color.</p>
+        <p>Descripción de la obra 3.</p>
       </div>
       <div class="gallery-item">
-        <img src="./images/Screenshot_20240924-112337.png" alt="Obra 4">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 4">
         <h3>Obra 4</h3>
-        <p>Un viaje al pasado a través de texturas clásicas. Técnica: acrílico sobre lienzo.</p>
+        <p>Descripción de la obra 4.</p>
       </div>
       <div class="gallery-item">
-        <img src="./images/Screenshot_20240924-112543.png" alt="Obra 5">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 5">
         <h3>Obra 5</h3>
-        <p>Interacción entre la luz y la sombra en el arte contemporáneo.</p>
+        <p>Descripción de la obra 5.</p>
       </div>
       <div class="gallery-item">
         <img src="./images/Screenshot_20240924-112608.png" alt="Obra 6">
         <h3>Obra 6</h3>
-        <p>Reflexión sobre el tiempo y la memoria a través de materiales mixtos.</p>
+        <p>Descripción de la obra 6.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 7">
+        <h3>Obra 7</h3>
+        <p>Descripción de la obra 7.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 8">
+        <h3>Obra 8</h3>
+        <p>Descripción de la obra 8.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 9">
+        <h3>Obra 9</h3>
+        <p>Descripción de la obra 9.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 10">
+        <h3>Obra 10</h3>
+        <p>Descripción de la obra 10.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 11">
+        <h3>Obra 11</h3>
+        <p>Descripción de la obra 11.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 12">
+        <h3>Obra 12</h3>
+        <p>Descripción de la obra 12.</p>
       </div>
     </div>
   </section>
@@ -309,7 +361,7 @@
   <!-- Historia -->
   <section id="history" class="history">
     <h2>Historia</h2>
-    <p>Gabeza es un artista visual con una carrera que abarca más de una década. Su obra explora la conexión entre el ser humano y la naturaleza, utilizando diferentes técnicas para transmitir emociones profundas y reflexiones sobre la vida moderna.</p>
+    <p>Texto sobre la historia del artista. Aquí puedes compartir tus experiencias, inspiraciones y el camino recorrido en el arte.</p>
   </section>
 
   <!-- Eventos -->
@@ -317,14 +369,14 @@
     <h2>Eventos</h2>
     <div class="event-list">
       <div class="event-item">
-        <h3>Exposición en la Galería XYZ</h3>
-        <p class="date">Fecha: 15 de octubre de 2024</p>
-        <p>Una colección de obras recientes que exploran la fusión entre arte y tecnología.</p>
+        <h3>Exposición en Galería XYZ</h3>
+        <div class="date">Fecha: 1 de enero de 2025</div>
+        <p>Descripción del evento.</p>
       </div>
       <div class="event-item">
-        <h3>Taller de Pintura Abstracta</h3>
-        <p class="date">Fecha: 22 de noviembre de 2024</p>
-        <p>Un taller práctico donde los participantes aprenderán técnicas de pintura abstracta.</p>
+        <h3>Conferencia sobre el Arte Contemporáneo</h3>
+        <div class="date">Fecha: 15 de marzo de 2025</div>
+        <p>Descripción del evento.</p>
       </div>
     </div>
   </section>
@@ -332,8 +384,8 @@
   <!-- Contacto -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
-    <p>Si estás interesado en saber más sobre el trabajo de Gabeza o quieres colaborar, ¡no dudes en ponerte en contacto!</p>
-    <button>Enviar un mensaje</button>
+    <p>Para consultas y colaboraciones, no dudes en ponerte en contacto.</p>
+    <button>Enviar Mensaje</button>
   </section>
 
   <!-- Footer -->
