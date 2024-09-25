@@ -5,42 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gabeza - Artista Visual</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Estilos Globales */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #F8F4F9;
+      background-color: #F4F4F9;
       color: #333;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     h1, h2, h3 {
-      color: #7D5A50;
+      font-family: 'Playfair Display', serif;
+      color: #333;
       text-align: center;
       margin-bottom: 20px;
     }
 
     p {
       color: #555;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     /* Navbar */
     .navbar {
       width: 100%;
-      background-color: #E9D8DB;
-      padding: 15px 30px;
+      background-color: #F7ECE1;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -51,11 +52,12 @@
     }
 
     .navbar a {
-      color: #333;
+      color: #7D5A50;
       text-decoration: none;
       padding: 10px 15px;
-      transition: background-color 0.3s ease;
       font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .navbar a:hover {
@@ -78,12 +80,12 @@
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       color: #fff;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      border-radius: 10px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      border-radius: 12px;
       animation: fadeIn 2s ease-in-out;
     }
 
@@ -99,7 +101,7 @@
     /* Sección de Portafolio */
     .portfolio {
       padding: 100px 30px;
-      background-color: #F8F4F9;
+      background-color: #FAF3E3;
     }
 
     .gallery {
@@ -110,20 +112,20 @@
 
     .card {
       background-color: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
     .card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
 
@@ -132,19 +134,19 @@
     }
 
     .card-content h3 {
+      font-size: 1.5rem;
       color: #7D5A50;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .card-content p {
-      font-size: 0.9rem;
-      color: #555;
+      font-size: 1rem;
+      color: #666;
     }
 
     /* Sección de Historia */
     .history {
-      background-color: #E9D8DB;
-      color: #333;
+      background-color: #E9E4E1;
       padding: 100px 30px;
       text-align: center;
     }
@@ -152,38 +154,47 @@
     .history p {
       max-width: 800px;
       margin: 0 auto;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     /* Seminarios y Eventos */
     .events {
       padding: 100px 30px;
-      background-color: #F8F4F9;
+      background-color: #F4F4F9;
       text-align: center;
     }
 
     .events h2 {
-      color: #7D5A50;
+      font-size: 2.5rem;
       margin-bottom: 40px;
+      color: #7D5A50;
     }
 
     .event-card {
       display: flex;
       justify-content: space-between;
       background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
+      border-radius: 12px;
+      padding: 25px;
       margin-bottom: 20px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
     }
 
     .event-card h3 {
       margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: #7D5A50;
     }
 
     .event-date {
       font-weight: bold;
-      color: #7D5A50;
+      color: #E27D60;
+      font-size: 1.1rem;
     }
 
     /* Sección de Contacto */
@@ -195,28 +206,41 @@
     }
 
     .contact h2 {
+      font-size: 2.5rem;
       margin-bottom: 30px;
     }
 
     .contact-btn {
-      padding: 15px 30px;
+      padding: 15px 40px;
       background-color: #fff;
       color: #7D5A50;
       border: none;
-      border-radius: 30px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .contact-btn:hover {
       background-color: #E9D8DB;
+      color: #333;
     }
 
+    /* Footer */
     footer {
       padding: 20px;
       background-color: #333;
       color: #fff;
       text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -272,48 +296,39 @@
   <section id="history" class="history">
     <h2>Historia</h2>
     <p>
-      Gabriela Cabeza, conocida como Gabeza, es una artista visual apasionada por la mezcla de formas y colores. Su obra abarca una amplia gama de estilos que evocan emociones profundas. Con su trayectoria, ha logrado un reconocimiento en múltiples galerías y exposiciones, consolidándose como una figura emergente en el mundo del arte.
+      Gabri
     </p>
   </section>
 
-  <!-- Seminarios y Eventos -->
+  <!-- Eventos -->
   <section id="events" class="events">
-    <h2>Seminarios, Eventos y Exposiciones</h2>
-
+    <h2>Seminarios y Eventos</h2>
     <div class="event-card">
       <div>
         <h3>Seminario de Técnicas Mixtas</h3>
-        <p>Explora nuevas técnicas en la creación de obras visuales con materiales mixtos.</p>
+        <p>Un seminario sobre las técnicas mixtas en pintura, impartido por Gabeza.</p>
       </div>
-      <div class="event-date">15 Octubre 2024</div>
+      <div class="event-date">10 de Octubre, 2024</div>
     </div>
-
     <div class="event-card">
       <div>
-        <h3>Exposición: Colores del Alma</h3>
-        <p>Una muestra exclusiva de las nuevas obras de Gabeza en la Galería Central.</p>
+        <h3>Exposición Anual de Arte Contemporáneo</h3>
+        <p>Presentación de la nueva colección de Gabeza en una exposición exclusiva.</p>
       </div>
-      <div class="event-date">1 Noviembre 2024</div>
+      <div class="event-date">20 de Noviembre, 2024</div>
     </div>
-
-    <div class="event-card">
-      <div>
-        <h3>Evento de Arte y Comunidad</h3>
-        <p>Un espacio de encuentro para artistas locales y emergentes.</p>
-      </div>
-      <div class="event-date">12 Diciembre 2024</div>
-    </div>
-
   </section>
 
-  <!-- Sección de Contacto -->
+  <!-- Contacto -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
-    <button class="contact-btn">Contáctame</button>
+    <p>¿Interesado en adquirir una obra o asistir a un seminario? Contáctanos para más información.</p>
+    <button class="contact-btn">Contáctanos</button>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2024 Gabeza Art - Todos los derechos reservados.
+    <p>© 2024 Gabeza Art. Todos los derechos reservados.</p>
   </footer>
 
 </body>
