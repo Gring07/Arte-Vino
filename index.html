@@ -4,53 +4,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gabeza - Artista Visual</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Global styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif; /* Clean, modern font */
+      font-family: 'Roboto', sans-serif; /* Clean font for body text */
     }
 
     body {
-      background-color: #f9f9f9; /* Light background for a clean look */
-      color: #333;
+      background-color: #f0f0f0; /* Light grey for a soft background */
+      color: #333; /* Dark grey for text */
       line-height: 1.6;
-      margin-top: 80px;
     }
 
     h1, h2, h3 {
-      font-family: 'Lora', serif; /* A more serious, elegant font */
-      color: #222;
+      font-family: 'Lora', serif; /* Elegant serif font for headings */
+      color: #222; /* Darker color for better contrast */
     }
 
     /* Navbar */
     .navbar {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
 
     .navbar .logo {
       font-size: 2rem;
-      font-weight: 700; /* Bolder logo */
-      color: #222;
+      font-weight: 700;
+      color: #222; /* Darker logo color */
     }
 
     .nav-links a {
       margin-left: 20px;
       text-decoration: none;
-      color: #444;
+      color: #444; /* Slightly lighter for links */
       font-weight: 500;
+      transition: color 0.3s; /* Smooth transition for hover effect */
     }
 
     .nav-links a:hover {
-      color: #888; /* Subtle hover effect */
+      color: #007BFF; /* Blue color on hover */
     }
 
     /* Hero section */
@@ -62,38 +63,22 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      animation: slide 20s infinite;
-    }
-
-    @keyframes slide {
-      0%, 20% { opacity: 1; }
-      25%, 45% { opacity: 0; }
-      50%, 70% { opacity: 1; }
-      75%, 95% { opacity: 0; }
-      100% { opacity: 1; }
+      background-image: url('./images/slide1.jpg'); /* Main slide image */
+      background-size: cover;
+      background-position: center;
     }
 
     .hero h1 {
-      position: relative;
-      font-size: 3rem; /* Adjusted for readability */
-      color: white;
-      z-index: 1;
-      opacity: 0.9; /* Slightly more opaque */
+      font-size: 3rem; /* Size of the title */
+      color: white; /* White text for contrast */
+      z-index: 1; /* Ensures text is above image */
+      opacity: 0.9; /* Slightly transparent */
     }
 
     /* Portfolio section */
     .portfolio {
       padding: 80px 0;
-      background-color: #fafafa;
+      background-color: #fafafa; /* Light background for portfolio */
       text-align: center;
     }
 
@@ -106,7 +91,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px; /* Spacing between images */
+      gap: 20px; /* Space between images */
     }
 
     .gallery-item {
@@ -114,8 +99,13 @@
       margin: 10px 0;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      background-color: white; /* White background for items */
+      transition: transform 0.3s; /* Animation effect */
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
     .gallery-item img {
@@ -126,15 +116,16 @@
     .gallery-item h3 {
       font-size: 1.5rem; /* Adjusted for consistency */
       margin: 10px 0;
+      color: #007BFF; /* Blue color for titles */
     }
 
     /* History, Events, Contact sections */
     .history, .events, .contact {
       padding: 80px 20px;
       text-align: center;
-      background-color: #fff;
+      background-color: #fff; /* White background for sections */
       margin: 20px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 
     .history h2, .events h2, .contact h2 {
@@ -143,22 +134,23 @@
 
     /* Contact button */
     .contact button {
-      background-color: #333;
+      background-color: #007BFF; /* Blue button */
       color: white;
       padding: 15px 30px;
       border: none;
       cursor: pointer;
       font-weight: 500;
       border-radius: 4px;
+      transition: background-color 0.3s; /* Smooth transition */
     }
 
     .contact button:hover {
-      background-color: #555;
+      background-color: #0056b3; /* Darker blue on hover */
     }
 
     /* Footer */
     footer {
-      background-color: #222;
+      background-color: #222; /* Dark footer */
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -184,9 +176,6 @@
 
   <!-- Hero section -->
   <section class="hero">
-    <img src="./images/slide1.jpg" alt="Imagen 1">
-    <img src="./images/slide2.jpg" alt="Imagen 2">
-    <img src="./images/slide3.jpg" alt="Imagen 3">
     <h1>Gabeza - Artista Visual</h1>
   </section>
 
@@ -260,36 +249,20 @@
   <!-- History -->
   <section id="history" class="history">
     <h2>Historia</h2>
-    <p>Aquí puedes compartir tus experiencias, inspiraciones y el camino recorrido en el arte.</p>
+    <p>Descripción sobre la trayectoria y evolución del artista.</p>
   </section>
 
   <!-- Events -->
   <section id="events" class="events">
     <h2>Eventos</h2>
-    <div class="event-list">
-      <div class="event-item">
-        <h3>Exposición en Galería XYZ</h3>
-        <div class="date">Fecha: 1 de enero de 2025</div>
-        <p>Descripción del evento.</p>
-      </div>
-      <div class="event-item">
-        <h3>Conferencia sobre el Arte Contemporáneo</h3>
-        <div class="date">Fecha: 15 de marzo de 2025</div>
-        <p>Descripción del evento.</p>
-      </div>
-      <div class="event-item">
-        <h3>Taller de Arte</h3>
-        <div class="date">Fecha: 20 de noviembre, 2024</div>
-        <p>Descripción breve del evento.</p>
-      </div>
-    </div>
+    <p>Detalles sobre eventos futuros y pasados.</p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
-    <p>Para consultas y colaboraciones, no dudes en ponerte en contacto.</p>
-    <button>Enviar Mensaje</button>
+    <p>Para más información, contáctame:</p>
+    <button onclick="window.location.href='mailto:tuemail@ejemplo.com'">Enviar un Correo</button>
   </section>
 
   <!-- Footer -->
