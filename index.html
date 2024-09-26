@@ -4,42 +4,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gabeza - Artista Visual</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Estilos globales */
+    /* Global styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif; /* Clean, modern font */
     }
 
     body {
-      background-color: #f3f3f3; /* Fondo suave claro */
+      background-color: #f9f9f9; /* Light background for a clean look */
       color: #333;
       line-height: 1.6;
       margin-top: 80px;
     }
 
     h1, h2, h3 {
-      font-family: 'Great Vibes', cursive; /* Tipografía creativa */
-      color: #444;
+      font-family: 'Lora', serif; /* A more serious, elegant font */
+      color: #222;
     }
 
     /* Navbar */
     .navbar {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 10px 30px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .navbar .logo {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      font-weight: 700; /* Bolder logo */
+      color: #222;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
       color: #444;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #888; /* Subtle hover effect */
     }
 
     /* Hero section */
@@ -73,64 +84,72 @@
 
     .hero h1 {
       position: relative;
-      font-size: 4rem;
+      font-size: 3rem; /* Adjusted for readability */
       color: white;
       z-index: 1;
-      opacity: 0.8; /* Opacidad para que el texto sea legible */
+      opacity: 0.9; /* Slightly more opaque */
     }
 
-    /* Sección de portafolio */
+    /* Portfolio section */
     .portfolio {
       padding: 80px 0;
       background-color: #fafafa;
       text-align: center;
     }
 
+    .portfolio h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem; /* Larger font for section title */
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Spacing between images */
+    }
+
     .gallery-item {
-      margin: 20px;
-      display: inline-block;
-      width: calc(25% - 40px); /* 4 imágenes en línea */
+      width: calc(33.33% - 20px); /* Three images per row */
+      margin: 10px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+      background-color: white;
     }
 
     .gallery-item img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
     }
 
-    /* Historia */
-    .history {
+    .gallery-item h3 {
+      font-size: 1.5rem; /* Adjusted for consistency */
+      margin: 10px 0;
+    }
+
+    /* History, Events, Contact sections */
+    .history, .events, .contact {
       padding: 80px 20px;
-      background-color: #fff;
       text-align: center;
+      background-color: #fff;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Eventos */
-    .events {
-      padding: 80px 20px;
-      background-color: #e2f3f5;
-      text-align: center;
-    }
-
-    .event-item {
-      background-color: #fff;
+    .history h2, .events h2, .contact h2 {
       margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 8px;
     }
 
-    /* Contacto */
-    .contact {
-      padding: 80px 20px;
-      background-color: #fff;
-      text-align: center;
-    }
-
+    /* Contact button */
     .contact button {
       background-color: #333;
       color: white;
       padding: 15px 30px;
       border: none;
       cursor: pointer;
+      font-weight: 500;
+      border-radius: 4px;
     }
 
     .contact button:hover {
@@ -139,10 +158,14 @@
 
     /* Footer */
     footer {
-      background-color: #333;
+      background-color: #222;
       color: white;
       padding: 20px 0;
       text-align: center;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
@@ -167,7 +190,7 @@
     <h1>Gabeza - Artista Visual</h1>
   </section>
 
-  <!-- Portafolio -->
+  <!-- Portfolio -->
   <section id="portfolio" class="portfolio">
     <h2>Portafolio</h2>
     <div class="gallery">
@@ -191,17 +214,56 @@
         <h3>Obra 4</h3>
         <p>Descripción de la obra 4.</p>
       </div>
-      <!-- Agrega más elementos de galería según sea necesario -->
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 5">
+        <h3>Obra 5</h3>
+        <p>Descripción de la obra 5.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 6">
+        <h3>Obra 6</h3>
+        <p>Descripción de la obra 6.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 7">
+        <h3>Obra 7</h3>
+        <p>Descripción de la obra 7.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 8">
+        <h3>Obra 8</h3>
+        <p>Descripción de la obra 8.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 9">
+        <h3>Obra 9</h3>
+        <p>Descripción de la obra 9.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 10">
+        <h3>Obra 10</h3>
+        <p>Descripción de la obra 10.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 11">
+        <h3>Obra 11</h3>
+        <p>Descripción de la obra 11.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/Screenshot_20240924-112608.png" alt="Obra 12">
+        <h3>Obra 12</h3>
+        <p>Descripción de la obra 12.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Historia -->
+  <!-- History -->
   <section id="history" class="history">
     <h2>Historia</h2>
     <p>Aquí puedes compartir tus experiencias, inspiraciones y el camino recorrido en el arte.</p>
   </section>
 
-  <!-- Eventos -->
+  <!-- Events -->
   <section id="events" class="events">
     <h2>Eventos</h2>
     <div class="event-list">
@@ -223,7 +285,7 @@
     </div>
   </section>
 
-  <!-- Contacto -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
     <p>Para consultas y colaboraciones, no dudes en ponerte en contacto.</p>
