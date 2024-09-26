@@ -4,48 +4,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gabeza - Artista Visual</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
     /* Global styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif; /* Clean font for body text */
+      font-family: 'Open Sans', sans-serif; /* Clean and subtle font */
     }
 
     body {
-      background-color: #f0f0f0; /* Light grey for a soft background */
-      color: #333; /* Dark grey for text */
+      background-color: #000; /* Black background */
+      color: #f0f0f0; /* Light grey for text for contrast */
       line-height: 1.6;
     }
 
     h1, h2, h3 {
-      font-family: 'Lora', serif; /* Elegant serif font for headings */
-      color: #222; /* Darker color for better contrast */
+      font-family: 'Roboto', sans-serif; /* Simple and readable font for headings */
+      color: #fff; /* White color for headings */
     }
 
     /* Navbar */
     .navbar {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+      background-color: rgba(30, 30, 30, 0.9); /* Darker transparent background */
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
     }
 
     .navbar .logo {
       font-size: 2rem;
       font-weight: 700;
-      color: #222; /* Darker logo color */
+      color: #fff; /* White logo color */
     }
 
     .nav-links a {
       margin-left: 20px;
       text-decoration: none;
-      color: #444; /* Slightly lighter for links */
+      color: #f0f0f0; /* Light grey for links */
       font-weight: 500;
       transition: color 0.3s; /* Smooth transition for hover effect */
     }
@@ -79,13 +79,14 @@
     /* Portfolio section */
     .portfolio {
       padding: 80px 0;
-      background-color: #fafafa; /* Light background for portfolio */
+      background-color: #121212; /* Dark grey for portfolio background */
       text-align: center;
     }
 
     .portfolio h2 {
       margin-bottom: 40px;
       font-size: 2.5rem; /* Larger font for section title */
+      color: #fff; /* White for section titles */
     }
 
     .gallery {
@@ -100,8 +101,8 @@
       margin: 10px 0;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
-      background-color: white; /* White background for items */
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Soft shadow */
+      background-color: #222; /* Dark background for items */
       transition: transform 0.3s; /* Animation effect */
     }
 
@@ -124,13 +125,14 @@
     .history, .events, .contact {
       padding: 80px 20px;
       text-align: center;
-      background-color: #fff; /* White background for sections */
+      background-color: #121212; /* Dark grey for sections */
       margin: 20px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle shadow */
     }
 
     .history h2, .events h2, .contact h2 {
       margin-bottom: 20px;
+      color: #fff; /* White for section headings */
     }
 
     /* Contact button */
@@ -250,20 +252,20 @@
   <!-- History Section -->
   <section id="history" class="history">
     <h2>Historia</h2>
-    <p>Descripción de la historia del artista y su trayectoria.</p>
+    <p>Breve historia sobre el artista y su obra.</p>
   </section>
 
   <!-- Events Section -->
   <section id="events" class="events">
     <h2>Eventos</h2>
-    <p>Información sobre exposiciones y eventos recientes.</p>
+    <p>Próximos eventos y exposiciones del artista.</p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
-    <p>Para consultas, por favor completa el siguiente formulario:</p>
-    <button>Contactar</button>
+    <p>Para consultas, por favor contáctame.</p>
+    <button>Enviar Mensaje</button>
   </section>
 
   <!-- Footer -->
