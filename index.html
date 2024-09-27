@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabeza - Artista Visual</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos globales */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lora', serif; /* Tipografía más elegante */
         }
 
         body {
@@ -24,6 +24,13 @@
             font-size: 2.5rem; /* Tamaño del título */
             text-align: center; /* Centrado */
             margin-top: 20px; /* Espaciado superior */
+            color: #fff; /* Color blanco */
+        }
+
+        h2 {
+            font-size: 2rem; /* Tamaño del subtítulo */
+            margin-bottom: 20px; /* Espaciado inferior */
+            color: #fff; /* Color blanco */
         }
 
         /* Navbar */
@@ -38,6 +45,12 @@
         .navbar .logo {
             font-size: 1.5rem;
             color: #fff;
+        }
+
+        .navbar a {
+            color: #fff; /* Enlaces blancos */
+            text-decoration: none; /* Sin subrayado */
+            margin: 0 10px; /* Espaciado entre enlaces */
         }
 
         /* Hero section */
@@ -71,10 +84,10 @@
 
         .hero h1 {
             position: relative;
-            font-size: 2.5rem; /* Tamaño reducido */
+            font-size: 2.5rem; /* Tamaño del título */
             color: white;
             z-index: 1;
-            opacity: 0.8; /* Opacidad para que el texto sea legible */
+            opacity: 0.9; /* Opacidad para que el texto sea legible */
         }
 
         /* Sección de portfolio */
@@ -83,13 +96,18 @@
             text-align: center;
         }
 
+        .gallery {
+            display: grid; /* Uso de grid para layout */
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 20px; /* Espaciado entre elementos */
+            margin-top: 20px; /* Espaciado superior */
+        }
+
         .gallery-item {
-            margin: 20px 0; /* Espaciado vertical */
             display: block; /* Cuadro debajo del otro */
-            width: 80%; /* Ancho de las imágenes */
-            max-width: 800px; /* Ancho máximo */
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 400px; /* Ancho máximo */
+            margin-left: auto; /* Centrando */
+            margin-right: auto; /* Centrando */
         }
 
         .gallery-item img {
@@ -110,7 +128,7 @@
         }
 
         .event-item {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.1);
             margin-bottom: 20px; /* Espaciado */
             padding: 20px; /* Espaciado interno */
             border-radius: 8px; /* Bordes redondeados */
@@ -153,20 +171,20 @@
     <nav class="navbar">
         <div class="logo">Gabeza</div>
         <div class="nav-links">
-            <a href="#portfolio" style="color: #fff; text-decoration: none; margin: 0 10px;">Portfolio</a>
-            <a href="#history" style="color: #fff; text-decoration: none; margin: 0 10px;">Historia</a>
-            <a href="#events" style="color: #fff; text-decoration: none; margin: 0 10px;">Eventos</a>
-            <a href="#contact" style="color: #fff; text-decoration: none; margin: 0 10px;">Contacto</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#history">Historia</a>
+            <a href="#events">Eventos</a>
+            <a href="#contact">Contacto</a>
         </div>
     </nav>
 
     <!-- Hero section -->
     <section class="hero">
-        <img src="./images/slide1.jpg" alt="Imagen 1">
-        <img src="./images/slide2.jpg" alt="Imagen 2">
-        <img src="./images/slide3.jpg" alt="Imagen 3">
-        <img src="./images/slide4.jpg" alt="Imagen 4">
-        <img src="./images/slide5.jpg" alt="Imagen 5">
+        <img src="https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Imagen+1" alt="Imagen 1">
+        <img src="https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Imagen+2" alt="Imagen 2">
+        <img src="https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Imagen+3" alt="Imagen 3">
+        <img src="https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Imagen+4" alt="Imagen 4">
+        <img src="https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Imagen+5" alt="Imagen 5">
         <h1>GABEZA - ARTISTA VISUAL</h1>
     </section>
 
@@ -175,24 +193,54 @@
         <h2>Portfolio</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="images/mi-imagen1.jpg" alt="Obra 1">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+1" alt="Obra 1">
                 <h3>Obra 1</h3>
                 <p>Descripción de la obra 1.</p>
             </div>
             <div class="gallery-item">
-                <img src="images/mi-imagen2.jpg" alt="Obra 2">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+2" alt="Obra 2">
                 <h3>Obra 2</h3>
                 <p>Descripción de la obra 2.</p>
             </div>
             <div class="gallery-item">
-                <img src="images/mi-imagen3.jpg" alt="Obra 3">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+3" alt="Obra 3">
                 <h3>Obra 3</h3>
                 <p>Descripción de la obra 3.</p>
             </div>
             <div class="gallery-item">
-                <img src="images/mi-imagen4.jpg" alt="Obra 4">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+4" alt="Obra 4">
                 <h3>Obra 4</h3>
                 <p>Descripción de la obra 4.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+5" alt="Obra 5">
+                <h3>Obra 5</h3>
+                <p>Descripción de la obra 5.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+6" alt="Obra 6">
+                <h3>Obra 6</h3>
+                <p>Descripción de la obra 6.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+7" alt="Obra 7">
+                <h3>Obra 7</h3>
+                <p>Descripción de la obra 7.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+8" alt="Obra 8">
+                <h3>Obra 8</h3>
+                <p>Descripción de la obra 8.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+9" alt="Obra 9">
+                <h3>Obra 9</h3>
+                <p>Descripción de la obra 9.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+10" alt="Obra 10">
+                <h3>Obra 10</h3>
+                <p>Descripción de la obra 10.</p>
             </div>
         </div>
     </section>
@@ -200,36 +248,36 @@
     <!-- Historia -->
     <section id="history" class="history">
         <h2>Historia</h2>
-        <p>Aquí puedes compartir tus experiencias, inspiraciones y el camino recorrido en el arte.</p>
+        <p>Aquí puedes incluir una breve historia sobre el artista, sus influencias y su trayectoria.</p>
     </section>
 
     <!-- Eventos -->
     <section id="events" class="events">
         <h2>Eventos</h2>
-        <div class="event-list">
-            <div class="event-item">
-                <h3>Exposición en Galería XYZ</h3>
-                <div class="date">Fecha: 1 de enero de 2025</div>
-                <p>Descripción del evento.</p>
-            </div>
-            <div class="event-item">
-                <h3>Conferencia sobre el Arte Contemporáneo</h3>
-                <div class="date">Fecha: 15 de marzo de 2025</div>
-                <p>Descripción del evento.</p>
-            </div>
-            <div class="event-item">
-                <h3>Taller de Arte</h3>
-                <div class="date">Fecha: 20 de noviembre, 2024</div>
-                <p>Descripción breve del evento.</p>
-            </div>
+        <div class="event-item">
+            <h3>Evento 1</h3>
+            <p>Detalles sobre el evento 1.</p>
+        </div>
+        <div class="event-item">
+            <h3>Evento 2</h3>
+            <p>Detalles sobre el evento 2.</p>
+        </div>
+        <div class="event-item">
+            <h3>Evento 3</h3>
+            <p>Detalles sobre el evento 3.</p>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contact" class="contact">
         <h2>Contacto</h2>
-        <p>Para consultas y colaboraciones, no dudes en ponerte en contacto.</p>
-        <button>Enviar Mensaje</button>
+        <p>Puedes contactarme a través de este formulario:</p>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <!-- Footer -->
