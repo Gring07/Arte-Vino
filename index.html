@@ -23,16 +23,7 @@
         h1 {
             font-size: 2.5rem; /* Tamaño del título */
             text-align: center; /* Centrado */
-            margin-top: 20px; /* Espaciado superior */
-            color: #fff; /* Color blanco */
-            position: absolute; /* Mantener el título en el slider */
-            z-index: 2; /* Para que esté por encima de las imágenes */
-            transition: opacity 0.5s ease; /* Transición suave */
-        }
-
-        h2 {
-            font-size: 2rem; /* Tamaño del subtítulo */
-            margin-bottom: 20px; /* Espaciado inferior */
+            margin: 20px 0; /* Espaciado superior e inferior */
             color: #fff; /* Color blanco */
         }
 
@@ -63,26 +54,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             overflow: hidden;
         }
 
         .hero img {
-            width: auto;
+            width: 100%;
             height: 100%;
-            max-width: none; /* Permitir tamaño original */
+            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .hero img.hidden {
-            opacity: 0; /* Oculta la imagen */
+            opacity: 0; /* Inicialmente ocultas */
+            transition: opacity 1s ease;
         }
 
         .hero img.visible {
             opacity: 1; /* Muestra la imagen */
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            opacity: 0.9; /* Opacidad para que el texto sea legible */
+            margin-top: 20px;
         }
 
         /* Sección de portfolio */
@@ -138,19 +132,6 @@
             text-align: center;
         }
 
-        .contact button {
-            background-color: #333; /* Color del botón */
-            color: white; /* Texto blanco */
-            padding: 15px 30px; /* Espaciado interno */
-            border: none; /* Sin borde */
-            cursor: pointer; /* Cambiar cursor */
-            font-size: 1rem; /* Tamaño de texto */
-        }
-
-        .contact button:hover {
-            background-color: #555; /* Color al pasar el mouse */
-        }
-
         /* Footer */
         footer {
             background-color: #333; /* Color de fondo */
@@ -176,12 +157,13 @@
     <!-- Hero section -->
     <section class="hero">
         <img src="https://arte-vino-rf7k.vercel.app/obra11.jfif" alt="Imagen 1" class="visible">
-        <img src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2" class="hidden">
-        <img src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3" class="hidden">
-        <img src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4" class="hidden">
-        <img src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5" class="hidden">
-        <h1>GABEZA - ARTISTA VISUAL</h1>
+        <img src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2">
+        <img src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3">
+        <img src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4">
+        <img src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5">
     </section>
+
+    <h1>GABEZA - ARTISTA VISUAL</h1>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -217,13 +199,33 @@
                 <h3>Obra 6</h3>
                 <p>Descripción de la obra 6.</p>
             </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+7" alt="Obra 7">
+                <h3>Obra 7</h3>
+                <p>Descripción de la obra 7.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+8" alt="Obra 8">
+                <h3>Obra 8</h3>
+                <p>Descripción de la obra 8.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+9" alt="Obra 9">
+                <h3>Obra 9</h3>
+                <p>Descripción de la obra 9.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+10" alt="Obra 10">
+                <h3>Obra 10</h3>
+                <p>Descripción de la obra 10.</p>
+            </div>
         </div>
     </section>
 
     <!-- Historia -->
     <section id="history" class="history">
         <h2>Historia</h2>
-        <p>Aquí puedes agregar información sobre la historia de Gabeza y su carrera como artista visual.</p>
+        <p>Aquí va la historia del artista y su trabajo.</p>
     </section>
 
     <!-- Eventos -->
@@ -231,44 +233,50 @@
         <h2>Eventos</h2>
         <div class="event-item">
             <h3>Seminario de Pintura</h3>
-            <p>Únete a nuestro seminario de pintura donde aprenderás técnicas y trucos de artistas profesionales.</p>
-            <p>Fecha: 15 de noviembre de 2024</p>
-            <p>Hora: 10:00 AM - 4:00 PM</p>
+            <p>Fecha: 15 de octubre</p>
+            <p>Descripción del seminario.</p>
         </div>
         <div class="event-item">
-            <h3>Clase de Pintura para Principiantes</h3>
-            <p>Una clase perfecta para aquellos que quieren iniciarse en el arte de la pintura.</p>
-            <p>Fecha: 22 de noviembre de 2024</p>
-            <p>Hora: 10:00 AM - 12:00 PM</p>
+            <h3>Clases de Pintura</h3>
+            <p>Fecha: Todos los sábados</p>
+            <p>Descripción de las clases.</p>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contact" class="contact">
         <h2>Contacto</h2>
-        <p>Si deseas obtener más información, no dudes en contactarnos.</p>
-        <button>Enviar Mensaje</button>
+        <p>Formulario de contacto aquí.</p>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Gabeza. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Lógica para el slider de imágenes
-        let currentIndex = 0;
         const images = document.querySelectorAll('.hero img');
-        const totalImages = images.length;
+        let current = 0;
 
-        function showNextImage() {
-            images[currentIndex].classList.remove('visible');
-            images[currentIndex].classList.add('hidden');
-            currentIndex = (currentIndex + 1) % totalImages;
-            images[currentIndex].classList.remove('hidden');
-            images[currentIndex].classList.add('visible');
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('visible');
+                if (i === index) {
+                    img.classList.add('visible');
+                }
+            });
         }
 
-        setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
+        function nextImage() {
+            current = (current + 1) % images.length;
+            showImage(current);
+        }
+
+        // Mostrar la primera imagen al cargar
+        showImage(current);
+
+        // Cambiar de imagen cada 5 segundos
+        setInterval(nextImage, 5000);
     </script>
 </body>
 </html>
