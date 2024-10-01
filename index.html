@@ -21,10 +21,12 @@
         }
 
         h1 {
-            font-size: 2.5rem; /* Tamaño del título */
+            font-size: 2rem; /* Tamaño del título */
             text-align: center; /* Centrado */
             margin: 20px 0; /* Espaciado superior e inferior */
             color: #fff; /* Color blanco */
+            position: relative;
+            z-index: 10; /* Asegura que el título esté por encima */
         }
 
         /* Navbar */
@@ -34,6 +36,9 @@
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
+            position: fixed;
+            top: 0;
+            z-index: 100; /* Asegura que la navbar esté por encima */
         }
 
         .navbar .logo {
@@ -52,13 +57,14 @@
             display: block;
             max-width: 100%;
             height: auto;
-            margin: 20px auto;
+            margin: 100px auto; /* Espacio arriba para que no tape la navbar */
         }
 
         /* Sección de portfolio */
         .portfolio {
             padding: 80px 20px; /* Espaciado */
             text-align: center;
+            margin-top: 20px; /* Margen superior para separar de la navbar */
         }
 
         .gallery {
@@ -210,13 +216,26 @@
     <section id="events" class="events">
         <h2>Eventos</h2>
         <div class="event-item">
-            <h3>Seminario de Pintura</h3>
-            <p>Fecha: 15 de octubre</p>
+            <h3>Seminario de Arte</h3>
+            <p>Fecha: 10 de octubre de 2024</p>
             <p>Descripción del seminario.</p>
         </div>
         <div class="event-item">
             <h3>Clases de Pintura</h3>
-            <p>Fecha: Todos los sábados</p>
-            <p>Descripción de las clases.</p>
+            <p>Fecha: 20 de octubre de 2024</p>
+            <p>Descripción de las clases de pintura.</p>
         </div>
-    </section
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>Aquí puedes incluir un formulario o información de contacto aquí.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gabeza - Artista Visual. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
