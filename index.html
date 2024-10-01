@@ -188,8 +188,9 @@
         <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3">
         <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4">
         <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5">
-        <h1 class="visible" onclick="alert('Bienvenido a la galería de Gabeza!')">GABEZA - ARTISTA VISUAL</h1>
     </section>
+
+    <h1 onclick="alert('Bienvenido a la galería de Gabeza!')">GABEZA - ARTISTA VISUAL</h1>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -266,16 +267,15 @@
         let currentIndex = 0;
 
         function changeImage() {
-            // Oculta la imagen actual y el título
+            // Oculta la imagen actual
             images[currentIndex].classList.add('hidden');
-            title.classList.add('hidden');
-
+            
             currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
             
             // Muestra la nueva imagen
             images[currentIndex].classList.remove('hidden');
 
-            // Muestra el título si la nueva imagen es la primera
+            // Controla la visibilidad del título basado en la imagen actual
             if (currentIndex === 0) {
                 title.classList.remove('hidden');
             } else {
