@@ -26,6 +26,7 @@
             margin-top: 20px; /* Espaciado superior */
             color: #fff; /* Color blanco */
             cursor: pointer; /* Cambia el cursor al pasar */
+            z-index: 1; /* Asegura que el texto esté encima de la imagen */
         }
 
         h1:hover {
@@ -70,25 +71,17 @@
         }
 
         .hero img {
-            width: auto; /* Ajustar ancho automáticamente */
-            height: 100%; /* Mantener altura completa */
-            max-width: none; /* No limitar el ancho máximo */
+            width: 100%; /* Ajusta el ancho al 100% del contenedor */
+            height: 100%; /* Mantiene la altura completa */
+            object-fit: cover; /* Mantiene la proporción de la imagen */
             position: absolute;
             top: 0;
             left: 0;
-            animation: slide 25s infinite; /* Ajuste de duración */
+            transition: opacity 1s ease-in-out; /* Transición suave para el cambio de imágenes */
         }
 
-        @keyframes slide {
-            0%, 16.67% { opacity: 1; }
-            20% { opacity: 0; }
-            20.01%, 36.67% { opacity: 1; }
-            40% { opacity: 0; }
-            40.01%, 56.67% { opacity: 1; }
-            60% { opacity: 0; }
-            60.01%, 76.67% { opacity: 1; }
-            80% { opacity: 0; }
-            80.01%, 100% { opacity: 1; }
+        .hero img.hidden {
+            opacity: 0; /* Oculta la imagen */
         }
 
         .hero h1 {
@@ -190,10 +183,10 @@
     <!-- Hero section -->
     <section class="hero">
         <img src="https://arte-vino-rf7k.vercel.app/obra11.jfif" alt="Imagen 1">
-        <img src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2">
-        <img src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3">
-        <img src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4">
-        <img src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5">
+        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2">
+        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3">
+        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4">
+        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5">
         <h1 onclick="alert('Bienvenido a la galería de Gabeza!')">GABEZA - ARTISTA VISUAL</h1>
     </section>
 
@@ -264,5 +257,19 @@
     <footer>
         <p>&copy; 2024 Gabeza. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Script para el cambio automático de imágenes en el slider
+        const images = document.querySelectorAll('.hero img');
+        let currentIndex = 0;
+
+        function changeImage() {
+            images[currentIndex].classList.add('hidden'); // Oculta la imagen actual
+            currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
+            images[currentIndex].classList.remove('hidden'); // Muestra la nueva imagen
+        }
+
+        setInterval(changeImage, 5000); // Cambia la imagen cada 5 segundos
+    </script>
 </body>
 </html>
