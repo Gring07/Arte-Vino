@@ -72,13 +72,6 @@
             opacity: 1; /* Muestra la imagen */
         }
 
-        .hero h1 {
-            position: relative;
-            z-index: 1;
-            opacity: 0.9; /* Opacidad para que el texto sea legible */
-            margin-top: 20px;
-        }
-
         /* Sección de portfolio */
         .portfolio {
             padding: 80px 20px; /* Espaciado */
@@ -87,14 +80,14 @@
 
         .gallery {
             display: grid; /* Uso de grid para layout */
-            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dos columnas */
             gap: 20px; /* Espaciado entre elementos */
             margin-top: 20px; /* Espaciado superior */
         }
 
         .gallery-item {
             display: block; /* Cuadro debajo del otro */
-            max-width: 400px; /* Ancho máximo */
+            max-width: 100%; /* Ancho máximo */
             margin-left: auto; /* Centrando */
             margin-right: auto; /* Centrando */
         }
@@ -170,27 +163,27 @@
         <h2>Portfolio</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+1" alt="Obra 1">
+                <img src="https://arte-vino-rf7k.vercel.app/obra11.jfif" alt="Obra 1">
                 <h3>Obra 1</h3>
                 <p>Descripción de la obra 1.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+2" alt="Obra 2">
+                <img src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Obra 2">
                 <h3>Obra 2</h3>
                 <p>Descripción de la obra 2.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+3" alt="Obra 3">
+                <img src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Obra 3">
                 <h3>Obra 3</h3>
                 <p>Descripción de la obra 3.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+4" alt="Obra 4">
+                <img src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Obra 4">
                 <h3>Obra 4</h3>
                 <p>Descripción de la obra 4.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+5" alt="Obra 5">
+                <img src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Obra 5">
                 <h3>Obra 5</h3>
                 <p>Descripción de la obra 5.</p>
             </div>
