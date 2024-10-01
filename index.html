@@ -25,17 +25,9 @@
             text-align: center; /* Centrado */
             margin-top: 20px; /* Espaciado superior */
             color: #fff; /* Color blanco */
-            cursor: pointer; /* Cambia el cursor al pasar */
-            z-index: 1; /* Asegura que el texto esté encima de la imagen */
-            transition: opacity 1s ease-in-out; /* Transición para opacidad */
-        }
-
-        h1.hidden {
-            opacity: 0; /* Ocultar el texto */
-        }
-
-        h1.visible {
-            opacity: 1; /* Mostrar el texto */
+            position: absolute; /* Mantener el título en el slider */
+            z-index: 2; /* Para que esté por encima de las imágenes */
+            transition: opacity 0.5s ease; /* Transición suave */
         }
 
         h2 {
@@ -76,14 +68,13 @@
         }
 
         .hero img {
-            max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
-            max-height: 100%; /* Mantiene la altura completa */
-            object-fit: contain; /* Mantiene la proporción de la imagen */
+            width: auto;
+            height: 100%;
+            max-width: none; /* Permitir tamaño original */
             position: absolute;
-            top: 50%; /* Centrado verticalmente */
-            left: 50%; /* Centrado horizontalmente */
-            transform: translate(-50%, -50%); /* Centrado exacto */
-            transition: opacity 1s ease-in-out; /* Transición suave para el cambio de imágenes */
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease;
         }
 
         .hero img.hidden {
@@ -184,46 +175,45 @@
 
     <!-- Hero section -->
     <section class="hero">
-        <img class="visible" src="https://arte-vino-rf7k.vercel.app/obra11.jfif" alt="Imagen 1">
-        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2">
-        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3">
-        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4">
-        <img class="hidden" src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5">
+        <img src="https://arte-vino-rf7k.vercel.app/obra11.jfif" alt="Imagen 1" class="visible">
+        <img src="https://arte-vino-rf7k.vercel.app/ob1.jfif" alt="Imagen 2" class="hidden">
+        <img src="https://arte-vino-rf7k.vercel.app/ob2.jfif" alt="Imagen 3" class="hidden">
+        <img src="https://arte-vino-rf7k.vercel.app/ob3.jfif" alt="Imagen 4" class="hidden">
+        <img src="https://arte-vino-rf7k.vercel.app/ob4.jfif" alt="Imagen 5" class="hidden">
+        <h1>GABEZA - ARTISTA VISUAL</h1>
     </section>
-
-    <h1 onclick="alert('Bienvenido a la galería de Gabeza!')">GABEZA - ARTISTA VISUAL</h1>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <h2>Portfolio</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob5.jfif" alt="Obra 1">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+1" alt="Obra 1">
                 <h3>Obra 1</h3>
                 <p>Descripción de la obra 1.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob6.jfif" alt="Obra 2">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+2" alt="Obra 2">
                 <h3>Obra 2</h3>
                 <p>Descripción de la obra 2.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob7.jfif" alt="Obra 3">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+3" alt="Obra 3">
                 <h3>Obra 3</h3>
                 <p>Descripción de la obra 3.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob8.jfif" alt="Obra 4">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+4" alt="Obra 4">
                 <h3>Obra 4</h3>
                 <p>Descripción de la obra 4.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob9.jfif" alt="Obra 5">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+5" alt="Obra 5">
                 <h3>Obra 5</h3>
                 <p>Descripción de la obra 5.</p>
             </div>
             <div class="gallery-item">
-                <img src="https://arte-vino-rf7k.vercel.app/ob10.jfif" alt="Obra 6">
+                <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Obra+6" alt="Obra 6">
                 <h3>Obra 6</h3>
                 <p>Descripción de la obra 6.</p>
             </div>
@@ -240,55 +230,45 @@
     <section id="events" class="events">
         <h2>Eventos</h2>
         <div class="event-item">
-            <h3>Evento 1</h3>
-            <p>Descripción del evento 1.</p>
+            <h3>Seminario de Pintura</h3>
+            <p>Únete a nuestro seminario de pintura donde aprenderás técnicas y trucos de artistas profesionales.</p>
+            <p>Fecha: 15 de noviembre de 2024</p>
+            <p>Hora: 10:00 AM - 4:00 PM</p>
         </div>
         <div class="event-item">
-            <h3>Evento 2</h3>
-            <p>Descripción del evento 2.</p>
+            <h3>Clase de Pintura para Principiantes</h3>
+            <p>Una clase perfecta para aquellos que quieren iniciarse en el arte de la pintura.</p>
+            <p>Fecha: 22 de noviembre de 2024</p>
+            <p>Hora: 10:00 AM - 12:00 PM</p>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contact" class="contact">
         <h2>Contacto</h2>
-        <p>Puedes contactarme a través de mis redes sociales o enviar un mensaje.</p>
+        <p>Si deseas obtener más información, no dudes en contactarnos.</p>
         <button>Enviar Mensaje</button>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Gabeza. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Script para el cambio automático de imágenes en el slider
-        const images = document.querySelectorAll('.hero img');
-        const title = document.querySelector('h1');
+        // Lógica para el slider de imágenes
         let currentIndex = 0;
+        const images = document.querySelectorAll('.hero img');
+        const totalImages = images.length;
 
-        function changeImage() {
-            // Oculta la imagen actual
+        function showNextImage() {
             images[currentIndex].classList.remove('visible');
             images[currentIndex].classList.add('hidden');
-            
-            currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
-            
-            // Muestra la nueva imagen
+            currentIndex = (currentIndex + 1) % totalImages;
             images[currentIndex].classList.remove('hidden');
             images[currentIndex].classList.add('visible');
-
-            // Controla la visibilidad del título basado en la imagen actual
-            if (currentIndex === 0) {
-                title.classList.remove('hidden');
-                title.classList.add('visible');
-            } else {
-                title.classList.remove('visible');
-                title.classList.add('hidden');
-            }
         }
 
-        setInterval(changeImage, 5000); // Cambia la imagen cada 5 segundos
+        setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
     </script>
 </body>
 </html>
