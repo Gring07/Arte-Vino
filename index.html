@@ -76,12 +76,13 @@
         }
 
         .hero img {
-            width: 100%; /* Ajusta el ancho al 100% del contenedor */
-            height: 100%; /* Mantiene la altura completa */
-            object-fit: cover; /* Mantiene la proporción de la imagen */
+            max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
+            max-height: 100%; /* Mantiene la altura completa */
+            object-fit: contain; /* Mantiene la proporción de la imagen */
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%; /* Centrado verticalmente */
+            left: 50%; /* Centrado horizontalmente */
+            transform: translate(-50%, -50%); /* Centrado exacto */
             transition: opacity 1s ease-in-out; /* Transición suave para el cambio de imágenes */
         }
 
@@ -268,17 +269,21 @@
 
         function changeImage() {
             // Oculta la imagen actual
+            images[currentIndex].classList.remove('visible');
             images[currentIndex].classList.add('hidden');
             
             currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
             
             // Muestra la nueva imagen
             images[currentIndex].classList.remove('hidden');
+            images[currentIndex].classList.add('visible');
 
             // Controla la visibilidad del título basado en la imagen actual
             if (currentIndex === 0) {
                 title.classList.remove('hidden');
+                title.classList.add('visible');
             } else {
+                title.classList.remove('visible');
                 title.classList.add('hidden');
             }
         }
